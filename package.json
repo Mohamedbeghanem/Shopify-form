@@ -1,12 +1,12 @@
-{
+﻿{
   "name": "algeria-cod-form",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npx shopify app dev",
-    "build": "npx shopify app build",
-    "start": "npx shopify app start",
+    "dev": "shopify app dev",
+    "build": "prisma generate && remix build",
+    "start": "remix-serve ./build/server/index.js",
     "lint": "eslint .",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "prisma:generate": "prisma generate",
