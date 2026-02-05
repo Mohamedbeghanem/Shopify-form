@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  
   "scripts": {
     "dev": "shopify app dev",
-    "build": "prisma generate && remix build",
+    "build": "remix build",
     "start": "remix-serve ./build/server/index.js",
     "lint": "eslint .",
     "typecheck": "tsc -p tsconfig.json --noEmit",
@@ -13,6 +14,7 @@
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio"
   },
+
   "dependencies": {
     "@prisma/client": "^5.9.1",
     "@remix-run/node": "^2.6.0",
