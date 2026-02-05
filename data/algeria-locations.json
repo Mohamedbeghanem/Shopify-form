@@ -1,22 +1,22 @@
 [
   {
-     name: Alger,
-    code: 16,
-    baladiyas: [Alger Centre, Bab El Oued, El Harrach, Bir Mourad Rais]
+    "name": "Alger",
+    "code": 16,
+    "baladiyas": ["Alger Centre", "Bab El Oued", "El Harrach", "Bir Mourad Rais"]
   },
   {
-    name: Oran,
-    code: 31,
-    baladiyas: [Oran, Es Senia, Bir El Djir, Ain El Turck]
+    "name": "Oran",
+    "code": 31,
+    "baladiyas": ["Oran", "Es Senia", "Bir El Djir", "Ain El Turck"]
   },
   {
-    name: Constantine,
-    code: 25,
-    baladiyas: [Constantine, El Khroub, Hamma Bouziane]
+    "name": "Constantine",
+    "code": 25,
+    "baladiyas": ["Constantine", "El Khroub", "Hamma Bouziane"]
   },
   {
-    name: Blida,
-    code: 09,
-    baladiyas: [Blida, Boufarik, Beni Mered]
+    "name": "Blida",
+    "code": "09",
+    "baladiyas": ["Blida", "Boufarik", "Beni Mered"]
   }
 ]
