@@ -6,9 +6,10 @@ generator client {
 }
 
 datasource db {
-  provider = env("DATABASE_PROVIDER")
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
 
 model Session {
   id          String   @id @default(cuid())
