@@ -1,0 +1,79 @@
+// Prisma schema for Algeria COD Form Builder
+// SQLite for dev, Postgres for production via DATABASE_URL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = env("DATABASE_PROVIDER")
+  url      = env("DATABASE_URL")
+}
+
+model Session {
+  id          String   @id @default(cuid())
+  shop        String
+  state       String
+  isOnline    Boolean  @default(false)
+  scope       String?
+  expires     DateTime?
+  accessToken String
+  userId      String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Shop {
+  id        String   @id @default(cuid())
+  shop      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  forms     Form[]
+}
+
+model Form {
+  id          String   @id @default(cuid())
+  shop        String
+  name        String
+  slug        String
+  isActive    Boolean  @default(true)
+  settings    Json
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  submissions Submission[]
+  @@index([shop])
+}
+
+model Submission {
+  id               String   @id @default(cuid())
+  shop             String
+  formId           String
+  productVariantId String
+  quantity         Int
+  name             String
+  phone            String
+  wilaya           String
+  baladiya         String
+  address          String
+  notes            String?
+  shippingOption   String
+  productPrice     Int
+  deliveryPrice    Int
+  discountAmount   Int
+  totalPrice       Int
+  status           String   @default("submitted")
+  draftOrderId     String?
+  createdAt        DateTime @default(now())
+  @@index([shop])
+  @@index([formId])
+}
+
+model FormEvent {
+  id        String   @id @default(cuid())
+  shop      String
+  formId    String
+  type      String
+  createdAt DateTime @default(now())
+  @@index([shop])
+  @@index([formId])
+}

@@ -1,0 +1,28 @@
+{% schema %}
+{
+  "name": "Algeria COD Form",
+  "target": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "form_slug",
+      "label": "Form slug",
+      "default": "algeria-cod"
+    }
+  ]
+}
+{% endschema %}
+
+<div
+  class="cod-form"
+  data-form-slug="{{ block.settings.form_slug }}"
+  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+  data-product-price="{{ product.selected_or_first_available_variant.price | divided_by: 100 }}"
+  data-shop="{{ shop.permanent_domain }}"
+  data-locale="{{ request.locale.iso_code }}"
+>
+  <div class="cod-form__loading">Loading COD form...</div>
+</div>
+
+{{ 'cod-form.css' | asset_url | stylesheet_tag }}
+{{ 'cod-form.js' | asset_url | script_tag }}

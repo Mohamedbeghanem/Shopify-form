@@ -1,0 +1,13 @@
+name = "Algeria COD Form Builder"
+client_id = ""
+application_url = ""
+embedded = true
+
+[access_scopes]
+scopes = "read_products,read_customers,write_draft_orders,write_orders,write_products"
+
+[auth]
+redirect_urls = ["/auth/callback", "/auth/shopify/callback", "/api/auth/callback"]
+
+[webhooks]
+api_version = "2024-10"
