@@ -12,8 +12,8 @@ import {
   Button,
   BlockStack
 } from '@shopify/polaris';
-import { authenticate } from '~/shopify.server';
-import { getForm, updateForm } from '~/models/form.server';
+import { authenticate } from '../shopify.server';
+import { getForm, updateForm } from '../models/form.server';
 
 export async function loader({ request, params }: LoaderFunctionArgs) {
   const { session } = await authenticate.admin(request);
@@ -310,3 +310,4 @@ export default function FormBuilder() {
     </Page>
   );
 }
+

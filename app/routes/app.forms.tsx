@@ -2,8 +2,8 @@ import type { LoaderFunctionArgs } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import { Page, Card, ResourceList, Text, Button } from '@shopify/polaris';
-import { authenticate } from '~/shopify.server';
-import { getForms } from '~/models/form.server';
+import { authenticate } from '../shopify.server';
+import { getForms } from '../models/form.server';
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const { session } = await authenticate.admin(request);
@@ -45,3 +45,4 @@ export default function Forms() {
     </Page>
   );
 }
+

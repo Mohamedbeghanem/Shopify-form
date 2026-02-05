@@ -1,7 +1,7 @@
 import type { LoaderFunctionArgs } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import crypto from 'node:crypto';
-import { db } from '~/db.server';
+import { db } from '../db.server';
 
 function verifyProxySignature(params: URLSearchParams, secret: string) {
   const signature = params.get('signature') || '';
@@ -46,3 +46,4 @@ export async function loader({ request }: LoaderFunctionArgs) {
     }
   });
 }
+

@@ -1,4 +1,4 @@
-import { db } from '~/db.server';
+import { db } from '../db.server';
 import type { Prisma } from '@prisma/client';
 
 export async function createSubmission(data: Prisma.SubmissionCreateInput) {
@@ -26,3 +26,4 @@ export async function countDraftOrders(shop: string, days: number) {
     where: { shop, draftOrderId: { not: null }, createdAt: { gte: since } }
   });
 }
+

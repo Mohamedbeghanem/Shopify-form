@@ -2,9 +2,10 @@ import type { ActionFunctionArgs, LoaderFunctionArgs } from '@remix-run/node';
 import { json, redirect } from '@remix-run/node';
 import { Form, useActionData } from '@remix-run/react';
 import { Page, Card, TextField, Button, BlockStack, Text } from '@shopify/polaris';
-import { authenticate } from '~/shopify.server';
-import { createForm } from '~/models/form.server';
-import { formSchema } from '~/utils/validation';
+import { authenticate } from '../shopify.server';
+import { createForm } from '../models/form.server';
+import { formSchema } from '../utils/validation';
+
 
 const defaultSettings = {
   defaultLanguage: 'ar',
@@ -94,3 +95,4 @@ export default function NewForm() {
     </Page>
   );
 }
+

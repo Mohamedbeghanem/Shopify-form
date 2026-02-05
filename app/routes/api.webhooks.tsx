@@ -1,7 +1,7 @@
 import type { ActionFunctionArgs } from '@remix-run/node';
 import { json } from '@remix-run/node';
-import { shopify } from '~/shopify.server';
-import { db } from '~/db.server';
+import { shopify } from '../shopify.server';
+import { db } from '../db.server';
 
 export async function action({ request }: ActionFunctionArgs) {
   const { topic, shop } = await shopify.authenticate.webhook(request);
@@ -10,3 +10,4 @@ export async function action({ request }: ActionFunctionArgs) {
   }
   return json({ ok: true });
 }
+

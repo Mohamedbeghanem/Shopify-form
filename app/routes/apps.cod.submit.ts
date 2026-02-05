@@ -1,10 +1,10 @@
 import type { ActionFunctionArgs } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import crypto from 'node:crypto';
-import { shopify } from '~/shopify.server';
-import { db } from '~/db.server';
-import { createSubmission } from '~/models/submission.server';
-import { submitSchema } from '~/utils/validation';
+import { shopify } from '../shopify.server';
+import { db } from '../db.server';
+import { createSubmission } from '../models/submission.server';
+import { submitSchema } from '../utils/validation';
 
 function verifyProxySignature(params: URLSearchParams, secret: string) {
   const signature = params.get('signature') || '';
@@ -166,3 +166,4 @@ export async function action({ request }: ActionFunctionArgs) {
 
   return json({ ok: true, message: 'success', draftOrderId });
 }
+

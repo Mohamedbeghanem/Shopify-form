@@ -1,4 +1,4 @@
-import { db } from '~/db.server';
+import { db } from '../db.server';
 import type { Prisma } from '@prisma/client';
 
 export async function createForm(shop: string, data: Prisma.FormCreateInput) {
@@ -20,3 +20,4 @@ export async function updateForm(shop: string, id: string, data: Prisma.FormUpda
 export async function deleteForm(shop: string, id: string) {
   return db.form.delete({ where: { id } });
 }
+

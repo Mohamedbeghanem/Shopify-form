@@ -1,7 +1,7 @@
 import type { LoaderFunctionArgs } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import { Page, Card, Select, Checkbox, BlockStack, Text } from '@shopify/polaris';
-import { authenticate } from '~/shopify.server';
+import { authenticate } from '../shopify.server';
 
 export async function loader({ request }: LoaderFunctionArgs) {
   await authenticate.admin(request);
@@ -34,3 +34,4 @@ export default function Settings() {
     </Page>
   );
 }
+

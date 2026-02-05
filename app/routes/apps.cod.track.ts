@@ -1,7 +1,7 @@
 import type { ActionFunctionArgs } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import crypto from 'node:crypto';
-import { trackEvent } from '~/models/event.server';
+import { trackEvent } from '../models/event.server';
 
 function verifyProxySignature(params: URLSearchParams, secret: string) {
   const signature = params.get('signature') || '';
@@ -33,3 +33,4 @@ export async function action({ request }: ActionFunctionArgs) {
   await trackEvent(shop, formId, type);
   return json({ ok: true });
 }
+

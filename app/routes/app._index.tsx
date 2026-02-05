@@ -9,9 +9,9 @@ import {
   DataTable,
   InlineStack
 } from '@shopify/polaris';
-import { authenticate } from '~/shopify.server';
-import { countDraftOrders, countSubmissions, getSubmissions } from '~/models/submission.server';
-import { countEvents } from '~/models/event.server';
+import { authenticate } from '../shopify.server';
+import { countDraftOrders, countSubmissions, getSubmissions } from '../models/submission.server';
+import { countEvents } from '../models/event.server';
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const { session } = await authenticate.admin(request);
@@ -95,3 +95,4 @@ export default function Dashboard() {
     </Page>
   );
 }
+

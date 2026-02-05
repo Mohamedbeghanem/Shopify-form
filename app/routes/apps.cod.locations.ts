@@ -1,7 +1,7 @@
 import type { LoaderFunctionArgs } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import crypto from 'node:crypto';
-import { getAlgeriaLocations } from '~/utils/algeria.server';
+import { getAlgeriaLocations } from '../utils/algeria.server';
 
 function verifyProxySignature(params: URLSearchParams, secret: string) {
   const signature = params.get('signature') || '';
@@ -29,3 +29,4 @@ export async function loader({ request }: LoaderFunctionArgs) {
 
   return json({ ok: true, locations: getAlgeriaLocations() });
 }
+
