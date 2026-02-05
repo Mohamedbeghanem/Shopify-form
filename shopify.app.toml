@@ -1,13 +1,19 @@
-name = "Algeria COD Form Builder"
-client_id = ""
-application_url = ""
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "3e1e7c2787cd54171d48b1f13e80b6ce"
+name = "COD Form Block"
+type = "theme"
+application_url = "https://example.com"
 embedded = true
 
+[webhooks]
+api_version = "2026-01"
+
 [access_scopes]
-scopes = "read_products,read_customers,write_draft_orders,write_orders,write_products"
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = ""
+optional_scopes = [ ]
+use_legacy_install_flow = false
 
 [auth]
-redirect_urls = ["/auth/callback", "/auth/shopify/callback", "/api/auth/callback"]
-
-[webhooks]
-api_version = "2024-10"
+redirect_urls = [ ]
