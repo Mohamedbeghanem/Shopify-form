@@ -1,44 +1,45 @@
 {
-  " name\: \algeria-cod-form\,
- \private\: true,
- \type\: \module\,
- \scripts\: {
- \dev\: \remix dev\,
- \build\: \remix build\,
- \start\: \remix-serve build\,
- \lint\: \eslint .\,
- \typecheck\: \tsc -p tsconfig.json --noEmit\,
- \prisma:generate\: \prisma generate\,
- \prisma:migrate\: \prisma migrate dev\,
- \prisma:studio\: \prisma studio\
- },
- \dependencies\: {
- \@prisma/client\: \^5.9.1\,
- \@remix-run/node\: \^2.6.0\,
- \@remix-run/react\: \^2.6.0\,
- \@remix-run/serve\: \^2.6.0\,
- \@shopify/app-bridge-react\: \^4.0.6\,
- \@shopify/polaris\: \^12.6.0\,
- \@shopify/polaris-icons\: \^9.4.0\,
- \@shopify/shopify-api\: \^11.1.0\,
- \@shopify/shopify-app-remix\: \^2.0.0\,
- \@shopify/shopify-app-session-storage-prisma\: \^4.0.0\,
- \dotenv\: \^16.4.1\,
- \i18next\: \^23.10.0\,
- \react\: \^18.2.0\,
- \react-dom\: \^18.2.0\,
- \tiny-invariant\: \^1.3.3\,
- \zod\: \^3.22.4\
- },
- \devDependencies\: {
- \@remix-run/dev\: \^2.6.0\,
- \@types/node\: \^20.11.6\,
- \@types/react\: \^18.2.48\,
- \@types/react-dom\: \^18.2.18\,
- \eslint\: \^8.56.0\,
- \eslint-config-prettier\: \^9.1.0\,
- \prettier\: \^3.2.2\,
- \prisma\: \^5.9.1\,
- \typescript\: \^5.3.3\
- }
+  "name": "algeria-cod-form",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+ "scripts": {
+  "dev": "shopify app dev",
+  "build": "shopify app build",
+  "start": "shopify app start",
+  "lint": "eslint .",
+  "typecheck": "tsc -p tsconfig.json --noEmit",
+  "prisma:generate": "prisma generate",
+  "prisma:migrate": "prisma migrate dev",
+  "prisma:studio": "prisma studio"
+},
+  "dependencies": {
+    "@prisma/client": "^5.9.1",
+    "@remix-run/node": "^2.6.0",
+    "@remix-run/react": "^2.6.0",
+    "@remix-run/serve": "^2.6.0",
+    "@shopify/app-bridge-react": "^4.0.6",
+    "@shopify/polaris": "^12.6.0",
+    "@shopify/polaris-icons": "^8.10.0",
+    "@shopify/shopify-api": "^10.0.0",
+    "@shopify/shopify-app-remix": "^2.0.0",
+    "@shopify/shopify-app-session-storage-prisma": "^4.0.0",
+    "dotenv": "^16.4.1",
+    "i18next": "^23.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tiny-invariant": "^1.3.3",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.6.0",
+    "@types/node": "^20.11.6",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.2",
+    "prisma": "^5.9.1",
+    "typescript": "^5.3.3"
+  }
 }
