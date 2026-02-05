@@ -4,16 +4,13 @@
   "private": true,
   "type": "module",
   
-  "scripts": {
-    "dev": "shopify app dev",
-    "build": "node ./node_modules/@remix-run/dev/dist/cli.js build",
-    "start": "node ./node_modules/@remix-run/serve/dist/cli.js ./build/server/index.js",
-    "lint": "eslint .",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate dev",
-    "prisma:studio": "prisma studio"
-  },
+"scripts": {
+  "dev": "shopify app dev",
+  "build": "shopify app build",
+  "start": "shopify app start",
+  "lint": "eslint ."
+},
+
 
   "dependencies": {
     "@prisma/client": "^5.9.1",
