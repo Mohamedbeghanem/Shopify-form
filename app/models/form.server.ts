@@ -20,4 +20,3 @@ export async function updateForm(shop: string, id: string, data: Prisma.FormUpda
 export async function deleteForm(shop: string, id: string) {
   return db.form.delete({ where: { id } });
 }
-
